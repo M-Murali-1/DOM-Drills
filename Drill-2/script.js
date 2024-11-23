@@ -11,6 +11,21 @@ allLeftButton.onclick = moveAllLeft;
 allRightButton.onclick = moveAllRight;
 leftButton.onclick = moveLeft;
 rightButton.onclick = moveRight;
+leftButton.style.cssText+=disabled;
+rightButton.style.cssText+=disabled;
+document.addEventListener("click", function (event) {
+leftButton.style.cssText+=disabled;
+rightButton.style.cssText+=disabled;
+    if (event.target.type === "checkbox") {
+       if(event.target.parentNode.parentNode.id=="right-container") {
+        leftButton.style.cssText+=initial;
+       }
+       else{
+        rightButton.style.cssText+=initial;
+       }
+    }
+});
+
 
 function moveLeft() {
     let selected = rightElements.querySelectorAll("input[type='checkbox']:checked");
@@ -34,7 +49,6 @@ function moveRight() {
         selected[itr].checked = false;
         rightElements.append(selected[itr].parentNode);
     }
-    
 }
 
 function moveAllLeft() {
