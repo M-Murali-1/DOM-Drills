@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="stepper">
+        <h1 class="heading">Stepper</h1>
+    </div>
+    <div id="circled-line">
+        <div id="contact" class="individual">
+            <div class="circle zero">
+                <p class="stage">1</p>
+            </div>
+        </div>
+        <hr class="divider one">
+        <div id="shipping" class="individual">
+            <div class="circle one" id="one">
+                <p>2</p>
+            </div>
+        </div>
+        <hr class="divider two">
+        <div id="payment" class="individual">
+            <div class="circle two">
+                <p>3</p>
+            </div>
+        </div>
+        <hr class="divider three">
+        <div id="delivered" class="individual">
+            <div class="circle three">
+                <p>4</p>
+            </div>
+        </div>
+    </div>
+    <div id="data">
+        <p>Contact Details</p>
+        <p>Shipping Address</p>
+        <p>Payment</p>
+        <p class="delivery">Delivered</p>
+    </div>
+    <h3 id="content-data">Add contact details for further communications.</h3>
+    <div class="buttons">
+        <button type="button" id="previous" disabled>Previous</button>
+        <button type="button" id="next">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
